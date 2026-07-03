@@ -28,7 +28,7 @@ These are all beginner level programming tasks to practice problem-solving skill
 
 ## Tutorial Source
 
-[![Python Projects for Beginners – Master Problem-Solving! 🚀](./content/tutorial-1.jpeg)(https://youtu.be/yVl_G-F7m8c?si=Q8ebGLM_njwdJAww)
+[![Python Projects for Beginners – Master Problem-Solving! 🚀](./extras/tutorial-1.jpeg)](https://youtu.be/yVl_G-F7m8c?si=Q8ebGLM_njwdJAww)
 
 ### Links
 
