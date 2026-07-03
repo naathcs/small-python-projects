@@ -1,0 +1,59 @@
+# Project Title
+Summary of the project
+
+## Table of Contents
+  - [Overview](#overview)
+  - [Views](#views)
+  - [About](#about)
+  - [Process Breakdown](#process-breakdown)
+  - [How to Run](#how-to-run)
+  - [Tutorial Source](#tutorial-source)
+    - [Links](#links)
+  - [Author](#author)
+
+## Overview
+
+THe goal of the project and its result in an short explanation. The more detailed one will be at written later in the paper.
+
+## Views
+gif of the projec working (if applicable)
+<div align="center">
+  <img width="" height="" alt="" src="" />
+</div>
+
+## About
+
+How it was created and what was used, followed, etc. to create the project (i.e. youtube video, pdf file, website exercise).
+
+Libraries used 
+personal enhacements added from the original code
+
+## Process Breakdown
+
+Step-by-step of the code, breaking down the process that took to create the current version, its adaptations, its enhancements, thought processes.
+If any block of code was particular challenging and/or provided a great deal of new knowledge, if possible, mention it in the breakdown process for the reader to understando your pointof view in the creation process.
+
+
+## How to Run
+
+If necessary, what the reader need to do, download, install in its machine in order to run your code.
+Any particular library, any specific version of the language, etc.
+
+
+## Tutorial Source
+
+The source used for the project. A video, PDF file, website page.
+
+[![text](link of the image)(source link)
+
+### Links
+These are the links that were used as reference and guide to adapt the original code to its current source.
+
+- [text](link) - summary title of the website and its reason to be used
+- [text](link) - summary title of the website and its reason to be used
+- [text](link) - summary title of the website and its reason to be used
+
+## Author
+
+- Developed by Nathalia Santos 🐉<br><br>
+[![LinkedIn Badge](https://img.shields.io/badge/-Nathalia_Santos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/naathcs/)](https://www.linkedin.com/in/naathcs/)
