@@ -22,23 +22,27 @@ def get_user_input():
             print('Please enter a valid amount!')
 
 
-
     # Check if currency input is available in library
 
     print('Choose the currency you want to convert FROM?\n' '(e.g., USD, CAD, EUR, BRL)')
-    currencyFrom = input()[:3].upper()
+    currencyFrom = input().strip().upper()[:3]
     while currencyFrom not in currencies: 
         print('Invalid entry. Please try again')
         print('Choose the currency you want to convert FROM?\n' '(e.g., USD, CAD, EUR, BRL)')
-        currencyFrom = input()[:3].upper()
+        currencyFrom = input().strip().upper()[:3]
 
-
-    print('Choose the currency you want to convert TO?\n' '(e.g., USD, CAD, EUR, BRL)')
-    currencyTo = input()[:3].upper()
-    while currencyTo not in currencies:
-        print('Invalid entry. Please try again')
+    # Check second currency and if it is not duplicated
+    while True:
         print('Choose the currency you want to convert TO?\n' '(e.g., USD, CAD, EUR, BRL)')
-        currencyTo = input()[:3].upper()
+        currencyTo = input().strip().upper()[:3]
+
+        if currencyTo == currencyFrom:
+            print('Currency cannot be repeated. Please try again.')
+            continue
+        elif currencyTo not in currencies:
+            print('Invalid entry. Please try again')
+            continue
+        break
 
     #return variables
     return amount, currencyFrom, currencyTo

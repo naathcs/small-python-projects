@@ -2,6 +2,7 @@
 .venv/
 
 # Files
+*.mov
 
 # Scripts
 

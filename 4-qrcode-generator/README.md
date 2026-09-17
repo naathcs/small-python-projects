@@ -69,7 +69,7 @@ python3 4-qrcode-generator.py
 - [QR Code Library](https://pypi.org/project/qrcode/) - Library used for the QR Code Generator Project
 - [Python for Beginners - Master Problem Solving](https://youtu.be/yVl_G-F7m8c?si=Q8ebGLM_njwdJAww) - Python Tutorial 
 
-## Authorde 
+## Author
 
 - Developed by Nathalia Santos 🐉<br><br>
 [![LinkedIn Badge](https://img.shields.io/badge/-Nathalia_Santos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/naathcs/)](https://www.linkedin.com/in/naathcs/)
