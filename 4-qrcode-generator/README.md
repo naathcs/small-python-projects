@@ -1,7 +1,6 @@
 # QR Code Generator
 Program to generate a QR Code image with a link, created with Python and using a QR Code library.
 
-
 ## Table of Content 
 - [Overview](#overview)
 - [View](#view)
