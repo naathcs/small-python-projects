@@ -52,10 +52,13 @@ python3 6-quiz-game.py
 
 ## Links
 
+- [Create a Quiz Games with Python](https://www.youtube.com/watch?v=zehwgTB0vV8) - Reference video used for a couple lines of code and the general structure of the project.
 - [Tkinter Usage](https://www.youtube.com/watch?v=epDKamC-V-8&t=1114s) - Understanding how to use the tkinter library.
 - [JSON Files](https://www.youtube.com/watch?v=iiADhChRriM&t=170s) - Creating a JSON file.
 - [Generate Randoms](https://docs.python.org/3/library/random.html) - Generate pseudo-random number for various distributions.
 - [Fixinf JSON Call Error](https://stackoverflow.com/questions/22282760/filenotfounderror-errno-2-no-such-file-or-directory) - Understanding what triggered the error when trying to call the JSON file into the code.
+- [Multi-level Nested JSON](https://medium.com/@ferzia_firdousi/multi-level-nested-json-82d29dd9528) - Nesting information in JSON file
+- [Random Sampling](https://note.nkmk.me/en/python-random-choice-sample-choices/) - Understanding the usage of `random.choice()`
 
 ## Author 
 
