@@ -11,13 +11,13 @@ A small pop quiz gamewith multiple choice answers and score counting.
 
 ## Overview
 
-The games is designed to be visually simple and intuitive for any user. There are 5 questions and 4 options of answer for each question. 
-The goalof the quiz is that, each time the program runs, five random questions will show up to the user, one at a time, and the options to answer will also be shown in a random position to avoid the user from memorizing the answers. At the end the score will be shown and a question to wheather the user would like to play again, and the answer will either run the program again or terminate it.
+The games is designed with 5 random questions and 4 options of answer for each question. 
+The goal of the quiz is that, each time the program runs, five random questions will show up to the user, one at a time, and the options to answer will also be shown. The user can then type their guess, and if they type an invalid answer the program will flag and ask the question again. Once a valid answer is inputted, the program will move on until all the questions are answered. At the end, the score will be shown and a question to wheather the user would like to play again, and the answer will either run the program again or terminate it.
 
 ## View
 
 <div align="center">
-  <img width="550" height="300" alt="" src=""/>
+  <img width="550" height="300" alt="" src="quiz_game.gif"/>
 </div>
 
 ## Process Breakdown
@@ -44,7 +44,6 @@ python3 -m venv venv
 # Active Virtual Environment
 source .venv/bin/activate
 ```
-
 ```
 # Run the Code
 python3 6-quiz-game.py
@@ -53,12 +52,12 @@ python3 6-quiz-game.py
 ## Links
 
 - [Create a Quiz Games with Python](https://www.youtube.com/watch?v=zehwgTB0vV8) - Reference video used for a couple lines of code and the general structure of the project.
-- [Tkinter Usage](https://www.youtube.com/watch?v=epDKamC-V-8&t=1114s) - Understanding how to use the tkinter library.
 - [JSON Files](https://www.youtube.com/watch?v=iiADhChRriM&t=170s) - Creating a JSON file.
 - [Generate Randoms](https://docs.python.org/3/library/random.html) - Generate pseudo-random number for various distributions.
-- [Fixinf JSON Call Error](https://stackoverflow.com/questions/22282760/filenotfounderror-errno-2-no-such-file-or-directory) - Understanding what triggered the error when trying to call the JSON file into the code.
+- [Fixing JSON Call Error](https://stackoverflow.com/questions/22282760/filenotfounderror-errno-2-no-such-file-or-directory) - Understanding what triggered the error when trying to call the JSON file into the code.
 - [Multi-level Nested JSON](https://medium.com/@ferzia_firdousi/multi-level-nested-json-82d29dd9528) - Nesting information in JSON file
 - [Random Sampling](https://note.nkmk.me/en/python-random-choice-sample-choices/) - Understanding the usage of `random.choice()`
+- [Simple Statements](https://docs.python.org/3/reference/simple_stmts.html) - Understand why functions need explicit return values to pass data back.
 
 ## Author 
 

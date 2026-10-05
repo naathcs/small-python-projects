@@ -12,59 +12,42 @@ opts = ['A. ','B. ','C. ','D. ']
 user_guesses = []
 correct_answers = []
 
+# tracking active questions
+current_question = None
+
+
 # Ask user name
 def user_info():
+    global userName 
     userName = input('Please enter your name: ')
     print(f'Welcome {userName}!\n')
 
-
-# Quiz Logic
-def quiz_questions():
-    questionNumber = 1
-
-    # get questions to randomize 
-    question_list = [
-        item for item in quiz_data if item.get('question')
-    ]
-
-    # Print questions from JSON file
-    for q in question_list[:5]: # limit the amount of prints to 5
-        
-        global random_question
-        random_question =  random.choice(question_list) # randomize question list
-        print(f'\n{questionNumber}. {random_question['question']}')
-        questionNumber += 1
-        loc=0
-        for option in random_question['options']:
-            print(f'{opts[loc]} - {option}')
-            loc+=1
-
-        check_answers()
-        
-
 # User Answer
 def user_input():
-    user_guess = input('\nEnter (A, B, C, D): ').strip().upper()[:1] # limit character to one
-    print(f'Choice Confirmed: {user_guess}')
-    print('-' * 30)
 
-    user_guesses.append(user_guess) # store user guesses
+     # Loop to limit the allowed typed characters
+    while True:
+        user_guess = input('\nEnter (A, B, C, D): ').strip().upper()[:1] # limit character to one
 
-    return user_guess
-
+        if user_guess in ('A','B','C','D'):
+            print(f'Choice Confirmed: {user_guess}')
+            print('-' * 30)
+            user_guesses.append(user_guess) # store user guesses
+            return user_guess # Return the user guess to be used if valid
+        else:
+            print('\nInvalid Entry. Please try again.')
 
 # Correct Answer
 def check_answers():
+    global score # get score variable
 
     user_guess = user_input()
     
-    correct_answer = random_question['correctAnswer'] # get the correct answer to verify the user's answer
-    answer_index = random_question['options'].index(correct_answer) # Find the location of the answer in the array
+    correct_answer = current_question['correctAnswer'] # get the correct answer to verify the user's answer
+    answer_index = current_question['options'].index(correct_answer) # Find the location of the answer in the array
     correct_letter = opts[answer_index].strip().rstrip('.') # clean variable
 
-    correct_answers.append(answer_index) # Store correct answers
-
-    global score # get score variable
+    correct_answers.append(correct_letter) # Store correct answers
 
     if user_guess == correct_letter:
         print("Correct!")
@@ -72,33 +55,71 @@ def check_answers():
         score += 1
         
     else:
-        print(f'Incorrect.')
+        print(f'Incorrect. The correct answer was {correct_letter}.')
         print('-' * 30)
 
-    return score
+
+# Quiz Logic
+def quiz_questions():
+    global current_question
+    questionNumber = 1
+
+    # Getting a limit of 5 random questions from the json file
+    selected_questions = random.sample(quiz_data, min(5, len(quiz_data)))
+    # Print Questions
+    for q in selected_questions:
+        current_question = q
+        print(f'\n{questionNumber}. {q['question']}')
+        questionNumber += 1
+
+        # Print Question 
+        loc = 0
+        for option in q['options']:
+            print(f'{opts[loc]} - {option}')
+            loc += 1
+
+        check_answers()
+
         
 # User Score
 def user_score():
-
-    score
 
     print('\n\n')
     print('-' * 30)
     print('-- RESULTS --')
     print('-' * 30)
 
-    print(f'Guesses: {user_guesses}')
-    print(f'Correct Answers: {c}')
+    print(f"{userName}'s Guesses: {user_guesses}")
+    print(f'Correct Answers: {correct_answers}')
 
-    # reasign score to a percentage value
-    finalScore = int(score / len(questionNumber) * 100)
-    print(f'Your score is: {finalScore}%')
+    # Calculate user score
+    total_questions = len(user_guesses)
+    if total_questions > 0:
+        finalScore = int((score / total_questions) * 100)
+    else:
+        finalScore = 0
+
+    print(f'Your final score is: {finalScore}% ({score}/{total_questions})')
+
 
 
 # Run program
 def run_all(): 
-    user_info()
-    quiz_questions()
-    user_score()
+    while True:
+        user_info()
+        quiz_questions()
+        user_score()
 
+        print(f'{userName}, would you like to play again? (Y/N): ')
+        answer = input().strip().upper()[:1]
+
+        while answer not in ('Y','N'):
+                print('\nInvalid Entry. Please try again.')             
+                print('\nWould you like to play again? (Y/N):')
+                answer = input().strip().upper()[:1]
+        
+        if answer == 'N':
+                break
+
+# Run the program
 run_all()
