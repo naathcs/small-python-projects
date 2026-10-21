@@ -9,7 +9,7 @@ A simple to-do list app using tkinter.
   - [How to Run](#how-to-run)
   - [Tutorial Source](#tutorial-source)
     - [Links](#links)
-  - [Author]
+  - [Author](#author)
 
 
 ## Overview
