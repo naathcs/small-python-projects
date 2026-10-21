@@ -38,7 +38,7 @@ I chose to follow the tutorial instead of adapting ot my personal style, to prac
 
 Download the file `7-tictactoe.py`.
 
-Open your terminal and find the where the `6-quiz-game` folder was downloaded, then follow the steps below.
+Open your terminal and find the where the `7-tictactoe` folder was downloaded, then follow the steps below.
 
 ```
 # (Optional)Create a Virtual Environment

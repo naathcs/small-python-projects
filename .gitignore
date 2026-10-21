@@ -5,7 +5,8 @@
 *.mov
 readmetemplate
 
+
 # Scripts
 
 # Others
-
+.DS_Store
