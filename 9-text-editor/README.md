@@ -98,10 +98,6 @@ python3 9-text-editor.py
 
 ## Tutorial Source
 
-The source used for the project. A video, PDF file, website page.
-
-[![text](link of the image)](source link)
-
 ### Links
 These are the links that were used as reference and guide to adapt the original code to its current source.
 
