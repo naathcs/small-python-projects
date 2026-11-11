@@ -66,7 +66,7 @@ lblText.pack(padx=(10), pady=(10))
 
 
 # Text Box
-passwordText = tk.Entry(frame, justify='center', )
+passwordText = tk.Entry(frame, justify='center')
 passwordText.pack(fill='x', padx=(10), pady=(10))
 
 
